@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Français</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 Wordle Français</h1>
+        <p>Devinez le mot en 6 essais maximum !</p>
+    </div>
+
+    <div class="game-container">
+        <div class="rules">
+            <h3>📝 Règles du jeu :</h3>
+            <p>• Trouvez le mot mystère en 6 essais maximum</p>
+            <p>• La longueur du mot varie de 4 à 8 lettres</p>
+            <p>• <span class="color-example example-correct"></span> Vert = lettre correcte à la bonne position</p>
+            <p>• <span class="color-example example-present"></span> Jaune = lettre présente mais mal placée</p>
+            <p>• <span class="color-example example-absent"></span> Gris = lettre absente du mot</p>
+        </div>
+
+        <div class="word-info">
+            <p>Mot de <span id="wordLength">?</span> lettres</p>
+        </div>
+
+        <div class="game-board" id="gameBoard">
+            <!-- Les lignes seront générées par JavaScript -->
+        </div>
+
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="wordInput" 
+                class="word-input" 
+                placeholder="Votre mot"
+                autocomplete="off"
+            >
+            <button id="submitBtn" class="submit-btn">Valider</button>
+        </div>
+
+        <div class="keyboard" id="keyboard">
+            <!-- Le clavier sera généré par JavaScript -->
+        </div>
+
+        <div class="message" id="message"></div>
+
+        <div class="stats" id="stats">
+            <p><strong>Essai:</strong> <span id="currentAttempt">1</span>/6</p>
+            <p><strong>Mot à trouver:</strong> <span id="targetWord">?</span></p>
+            <button id="newGameBtn" class="new-game-btn">Nouvelle partie</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
